@@ -1,9 +1,27 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1>Portafolio Web</h1>
-	</main>
+  <main>
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+        Hi! I'm Francisco
+
+        <a
+          href="https://www.linkedin.com/in/francisco-javier-aleman-romero/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Available for Hire</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl opacity-80">
+        FullStack Web Developer, specialized in FrontEnd Development. I'm from
+        Venezuela, currently living in Buenos Aires, Argentina.
+      </h2>
+    </section>
+  </main>
 </Layout>
