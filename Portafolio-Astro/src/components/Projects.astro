@@ -2,33 +2,91 @@
 import TailwindIcon from "./icons/TailwindIcon.astro"
 import LinkButton from "./LinkButton.astro";
 import GitHubIcon from "./icons/GitHubIcon.astro";
+import HTMLIcon from "./icons/HTMLIcon.astro"
+import CSSIcon from "./icons/CSSIcon.astro"
+import JavaScriptIcon from "./icons/JavaScriptIcon.astro"
+import ReactIcon from "./icons/ReactIcon.astro"
+import ReduxIcon from "./icons/ReduxIcon.astro"
+import NodeJsIcon from "./icons/NodeJsIcon.astro"
+import PostgreSQLIcon from "./icons/PostgreSQLIcon.astro"
+import SequelizeIcon from "./icons/SequelizeIcon.astro"
 
 const TAGS = {
   TAILWIND: {
     name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
+    class: "bg-[#003159] text-white dark:text-black border-2 border-sky-300",
     icon: TailwindIcon,
       
   },
+  HTML: {
+    name: "HTML",
+    class: "bg-[#f76d31] text-white border-2 border-orange-300",
+    icon: HTMLIcon,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#03b1fc] text-white border-2 border-sky-300",
+    icon: CSSIcon,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#c9bb16] text-white border-2 border-yellow-300",
+    icon: JavaScriptIcon,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#0398fc] text-white border-2 border-sky-300",
+    icon: ReactIcon,
+  },
+  REDUX: {
+    name: "Redux",
+    class: "bg-[#ab58d1] text-white border-2 border-purple-300",
+    icon: ReduxIcon,
+  },
+  NODEJS: {
+    name: "NodeJs",
+    class: "bg-[#16c925] text-white border-2 border-green-300",
+    icon: NodeJsIcon,
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    class: "bg-[#898f8a] text-white border-2 border-gray-300",
+    icon: PostgreSQLIcon,
+  },
+  SEQUELIZE: {
+    name: "Sequelize",
+    class: "bg-[#2233e6] text-white border-2 border-blue-300",
+    icon: SequelizeIcon,
+  },
+  
 };
 
 const PROJECTS = [
   {
-    title: "Project 1",
-    description: "Lorem Ipsum",
+    title: "Vianda Express",
+    description: "Desarrollo de una E-commerce de venta de viandas saludables junto a un grupo de 7 personas. La aplicacion cuenta con registro de usuario, carrito de compras, historial de compras, seguimiento y detalles de pedidos, entre otras features. Fue creada desde cero con React, JavaScript, Node.js, Express.js, Sequelize, Redux y PostgreSQL",
     link: "#",
     github: "#",
     image: "asdasdasd",
-    tags: [TAGS.TAILWIND],
+    tags: [TAGS.JAVASCRIPT, TAGS.NODEJS, TAGS.REACT, TAGS.REDUX, TAGS.SEQUELIZE, TAGS.POSTGRESQL],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Country App",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS",
+      "Desarrollo de una Single Page Aplication sobre todos los países del mundo. Cuenta con una barra de búsqueda, ordenamiento y filtrado, detalles de los países y formulario controlado. Fue realizado con tecnologías como: React, Javascript, Express.js, Sequelize, Redux y Node.js",
     link: "https://adventjs.dev",
     github: "#",
     image: "/projects/adventjs.webp",
-    tags: [TAGS.TAILWIND],
+    tags: [TAGS.JAVASCRIPT, TAGS.NODEJS, TAGS.REACT, TAGS.REDUX, TAGS.SEQUELIZE, TAGS.POSTGRESQL],
+  },
+  {
+    title: "Chatbot",
+    description:
+      "Desarrollo de un Chatbot, el cual realiza peticiones a la api de OpenAI. El chatbot te puede responder cualquier pregunta igual que lo hace ChatGPT. Fue desarrollado con: JavaScript, HTML y CSS",
+    link: "https://adventjs.dev",
+    github: "#",
+    image: "/projects/adventjs.webp",
+    tags: [TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS],
   },
 ];
 ---
@@ -41,7 +99,15 @@ const PROJECTS = [
           {title}
         </h3>
         <p class="text-lg mb-4 text-pretty">{description}</p>
-        <ul class="flex gap-x-2 flex-row mb-2">
+        
+        <img
+          loading="lazy"
+          class="rounded shadow-2xl shadow-white/10 aspect-video"
+          src={image}
+          alt={`Captura de pantalla del proyecto ${image}`}
+        />
+
+        <ul class="flex gap-x-2 flex-row mt-2">
           {tags.map((tag) => (
             <li>
               <span
@@ -53,12 +119,6 @@ const PROJECTS = [
             </li>
           ))}
         </ul>
-        <img
-          loading="lazy"
-          class="rounded shadow-2xl shadow-white/10 aspect-video"
-          src={image}
-          alt={`Captura de pantalla del proyecto ${image}`}
-        />
         <footer class="flex gap-x-4 items-end justify-start mt-4">
           {github && (
             <LinkButton href={github}>

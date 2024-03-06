@@ -10,6 +10,8 @@ import SectionContainer from "../components/SectionContainer.astro"
 import BriefCaseIcon from "../components/icons/BriefCaseIcon.astro"
 import CodeIcon from "../components/icons/CodeIcon.astro"
 import Projects from "../components/Projects.astro"
+import AboutMe from "../components/AboutMe.astro"
+import ProfileCheckIcon from "../components/icons/ProfileCheckIcon.astro"
 ---
 
 <Layout title="Portafolio de Francisco Alemán - Desarrollador y Programador Web" description="Contrata a Francisco Alemán para ayudar a tu empresa a desarrollar tus aplicaciones web. Especializado en el FrontEnd">
@@ -65,6 +67,16 @@ import Projects from "../components/Projects.astro"
         Proyectos
       </h2>
       <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobremi">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+      >
+        <ProfileCheckIcon class="size-7" />
+        Sobre mi
+      </h2>
+      <AboutMe />
     </SectionContainer>
   </main>
 </Layout>
