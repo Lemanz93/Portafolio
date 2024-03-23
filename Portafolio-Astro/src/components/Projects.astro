@@ -10,11 +10,12 @@ import ReduxIcon from "./icons/ReduxIcon.astro"
 import NodeJsIcon from "./icons/NodeJsIcon.astro"
 import PostgreSQLIcon from "./icons/PostgreSQLIcon.astro"
 import SequelizeIcon from "./icons/SequelizeIcon.astro"
+import ViandaExpressImage from "../components/images/ViandaExpress.png"
 
 const TAGS = {
   TAILWIND: {
     name: "Tailwind CSS",
-    class: "bg-[#003159] text-white dark:text-black border-2 border-sky-300",
+    class: "bg-[#003159] text-white border-2 border-sky-300",
     icon: TailwindIcon,
       
   },
@@ -63,31 +64,32 @@ const TAGS = {
 
 const PROJECTS = [
   {
+    title: "Chatbot",
+    description:
+      "Desarrollo de un Chatbot, el cual realiza peticiones a la api de OpenAI. El chatbot te puede responder cualquier pregunta igual que lo hace ChatGPT. Fue desarrollado con: JavaScript, HTML y CSS",
+    link: "#",
+    github: "https://github.com/Lemanz93/Chatbot-JS",
+    image: "Chatbot.png",
+    tags: [TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS],
+  },
+  {
     title: "Vianda Express",
     description: "Desarrollo de una E-commerce de venta de viandas saludables junto a un grupo de 7 personas. La aplicacion cuenta con registro de usuario, carrito de compras, historial de compras, seguimiento y detalles de pedidos, entre otras features. Fue creada desde cero con React, JavaScript, Node.js, Express.js, Sequelize, Redux y PostgreSQL",
     link: "#",
-    github: "#",
-    image: "asdasdasd",
+    github: "https://github.com/Lemanz93/PFecommerce11B",
+    image: "/ViandaExpress.png",
     tags: [TAGS.JAVASCRIPT, TAGS.NODEJS, TAGS.REACT, TAGS.REDUX, TAGS.SEQUELIZE, TAGS.POSTGRESQL],
   },
   {
     title: "Country App",
     description:
       "Desarrollo de una Single Page Aplication sobre todos los países del mundo. Cuenta con una barra de búsqueda, ordenamiento y filtrado, detalles de los países y formulario controlado. Fue realizado con tecnologías como: React, Javascript, Express.js, Sequelize, Redux y Node.js",
-    link: "https://adventjs.dev",
-    github: "#",
-    image: "/projects/adventjs.webp",
+    link: "https://pi-countries-deploy-azure.vercel.app",
+    github: "https://github.com/Lemanz93/PI-Countries",
+    image: "CountriesApp.png",
     tags: [TAGS.JAVASCRIPT, TAGS.NODEJS, TAGS.REACT, TAGS.REDUX, TAGS.SEQUELIZE, TAGS.POSTGRESQL],
   },
-  {
-    title: "Chatbot",
-    description:
-      "Desarrollo de un Chatbot, el cual realiza peticiones a la api de OpenAI. El chatbot te puede responder cualquier pregunta igual que lo hace ChatGPT. Fue desarrollado con: JavaScript, HTML y CSS",
-    link: "https://adventjs.dev",
-    github: "#",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS],
-  },
+  
 ];
 ---
 
@@ -101,7 +103,6 @@ const PROJECTS = [
         <p class="text-lg mb-4 text-pretty">{description}</p>
         
         <img
-          loading="lazy"
           class="rounded shadow-2xl shadow-white/10 aspect-video"
           src={image}
           alt={`Captura de pantalla del proyecto ${image}`}

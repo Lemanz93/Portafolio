@@ -31,7 +31,7 @@ import ProfileCheckIcon from "../components/icons/ProfileCheckIcon.astro"
       </h1>
       <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px] text-black dark:text-white">
         <span class="text-yellow-800 dark:text-yellow-200/90">Desarrollador Web FullStack</span>,
-        especializado en el desarrollo FrontEnd. Soy de Venezuela, actualmente vivo en <span class="text-blue-200/90 dark:text-blue-200/90">Buenos Aires, Argentina</span
+        especializado en el desarrollo FrontEnd. Soy de Venezuela, actualmente vivo en <span class="text-blue-400 dark:text-blue-200/90">Buenos Aires, Argentina</span
         >.
       </h2>
 
@@ -53,6 +53,16 @@ import ProfileCheckIcon from "../components/icons/ProfileCheckIcon.astro"
       </nav>
     </SectionContainer>
 
+    <SectionContainer id="sobremi">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+      >
+        <ProfileCheckIcon class="size-7" />
+        Sobre mi
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+
     <SectionContainer id="experiencia">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white">
         <BriefCaseIcon class="size-7" />
@@ -69,14 +79,6 @@ import ProfileCheckIcon from "../components/icons/ProfileCheckIcon.astro"
       <Projects />
     </SectionContainer>
 
-    <SectionContainer id="sobremi">
-      <h2
-        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
-      >
-        <ProfileCheckIcon class="size-7" />
-        Sobre mi
-      </h2>
-      <AboutMe />
-    </SectionContainer>
+    
   </main>
 </Layout>
